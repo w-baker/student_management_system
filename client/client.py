@@ -1,4 +1,5 @@
-import StudentService as stuSer
+from service import StudentService as stuSer
+
 
 def client():
     while True:

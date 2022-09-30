@@ -12,7 +12,7 @@ def implement(sql, *args):
     """
     #读取数据库配置文件
     cf = configparser.ConfigParser()
-    cf.read('db.conf', encoding='utf-8')
+    cf.read('resources/db.conf', encoding='utf-8')
     # 获取数据库连接
     db = pymysql.connect(
         host=cf.get('mysql', 'DB_HOST'),

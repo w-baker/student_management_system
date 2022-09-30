@@ -1,6 +1,6 @@
-import MyException
-import Student
-import StudentDao
+from utils import MyException
+from bean import Student
+from dao import StudentDao
 import utils
 
 

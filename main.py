@@ -19,7 +19,7 @@
     （3）学生信息需要使用面向对象的编程去实现，合理设计学生对象的属性及行为（方法）。
     （4）管理系统中的每一个功能的操作都要与mysql数据库里的数据表同步。
 """
-import client
+from client import client
 
 if __name__ == '__main__':
     client.client()

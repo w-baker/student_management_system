@@ -1,5 +1,5 @@
-from DbUtils import implement
-from Student import Student
+from utils.DbUtils import implement
+from bean.Student import Student
 
 
 def query_by_name(name):
