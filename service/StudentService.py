@@ -2,6 +2,7 @@ from util import MyException
 from bean import Student
 from dao import StudentDao
 from util.MyUtils import *
+from bean.Student import *
 
 
 def input_stu(s_id=None) -> Student:
@@ -55,7 +56,7 @@ def add_stu():
         stu = input_stu()  # 获取学生信息
         print(stu)
 
-        if utils.isOk("确认添加吗？（Y/N）:"):
+        if isOk("确认添加吗？（Y/N）:"):
             result = StudentDao.add(stu)  # 获取执行结果
             if result:
                 print("添加成功！！！")
@@ -128,7 +129,7 @@ def update_stu():
             print(stu)
             stu = input_stu(id_input)
 
-            if utils.isOk(f"确认修改为{stu}吗？（Y/N）:"):  # 确认执行操作
+            if isOk(f"确认修改为{stu}吗？（Y/N）:"):  # 确认执行操作
                 result = StudentDao.update(stu)
                 if result[0]:
                     print("修改成功！！！")
@@ -156,7 +157,7 @@ def del_stu():
         stu = StudentDao.query_by_id(id_input)[1]
         if stu:  # 判断是否有对应学号的学生
             print(stu)
-            if utils.isOk(f"确定要删除{id_input}吗？(Y/N)"):
+            if isOk(f"确定要删除{id_input}吗？(Y/N)"):
                 if StudentDao.delete(id_input)[0]:
                     print("删除成功！！！！")
                 else:
