@@ -1,4 +1,4 @@
-from utils.DbUtils import implement
+from util.DbUtils import implement
 from bean.Student import Student
 
 

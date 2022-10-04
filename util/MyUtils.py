@@ -28,6 +28,8 @@ def isName(name):
     :param name: 需要判断的字符串
     :return: True:名字正确，False:名字错误
     """
+    if name == "":
+        return False
     for char in list(name):
         if '\u4e00' <= char <= '\u9fff':  # 当前字符为汉字
             pass

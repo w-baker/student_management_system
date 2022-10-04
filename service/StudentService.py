@@ -1,7 +1,7 @@
-from utils import MyException
+from util import MyException
 from bean import Student
 from dao import StudentDao
-import utils
+from util.MyUtils import *
 
 
 def input_stu(s_id=None) -> Student:
@@ -14,12 +14,12 @@ def input_stu(s_id=None) -> Student:
         try:
             if not s_id:  # 判断是修改还是新增操作
                 s_id = input("请输入学号(小于20位的整数)：")
-                if not utils.isId(s_id):
+                if not isId(s_id):
                     s_id = None
                     raise MyException.IdException(s_id)
 
             name = input("请输入姓名：")
-            if not utils.isName(name):
+            if not isName(name):
                 raise MyException.NameException(name)
 
             sex = input("请输入性别(男，女)默认为男：")
